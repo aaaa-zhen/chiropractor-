@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>健身词汇卡片 Fitness Vocabulary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">💪</span>
+        <h1>健身词汇卡片</h1>
+      </div>
+    </header>
+
+    <!-- 分类筛选 -->
+    <nav class="category-nav">
+      <button class="category-btn active" data-category="all">📚 全部</button>
+      <button class="category-btn" data-category="anatomy">🦴 身体</button>
+      <button class="category-btn" data-category="exercise">🏋️ 动作</button>
+      <button class="category-btn" data-category="equipment">🎯 器材</button>
+      <button class="category-btn" data-category="chiropractic">🔧 脊椎</button>
+      <button class="category-btn" data-category="symptoms">😣 症状</button>
+      <button class="category-btn" data-category="training">📊 术语</button>
+      <button class="category-btn" data-category="nutrition">🥗 营养</button>
+      <button class="category-btn" data-category="professional">📚 专业</button>
+    </nav>
+
+    <!-- 主卡片 -->
+    <main class="main-content">
+      <div class="card">
+        <!-- 分类标签 -->
+        <div class="card-badge" id="card-badge">身体部位</div>
+
+        <!-- emoji -->
+        <div class="card-emoji" id="card-emoji">💪</div>
+
+        <!-- 单词 -->
+        <div class="card-word">
+          <span class="word-text" id="word-text">muscle</span>
+          <button class="audio-btn" id="audio-btn" title="播放发音">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- 中文意思 -->
+        <div class="card-meaning" id="card-meaning">肌肉</div>
+
+        <!-- 分割线 -->
+        <div class="card-divider"></div>
+
+        <!-- 例句 -->
+        <div class="card-example">
+          <div class="example-en" id="example-en">Building muscle takes time and effort.</div>
+          <div class="example-cn" id="example-cn">增肌需要时间和努力。</div>
+        </div>
+      </div>
+
+      <!-- 导航按钮 -->
+      <div class="nav-buttons">
+        <button class="nav-btn" id="prev-btn">
+          <span>⬅️</span>
+          <span>上一个</span>
+        </button>
+        <div class="progress-info">
+          <span id="current-num">1</span>
+          <span>/</span>
+          <span id="total-num">200</span>
+        </div>
+        <button class="nav-btn" id="next-btn">
+          <span>下一个</span>
+          <span>➡️</span>
+        </button>
+      </div>
+
+      <!-- 快捷键提示 -->
+      <div class="keyboard-hint">
+        ← → 键切换卡片 · 空格键播放发音
+      </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <p>💪 每天学几个，积少成多！</p>
+    </footer>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* ========================================
+   Fitness Vocab - Dark Flat Design
+   Mobile First / Touch Friendly
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --bg: #0A0A0A;
+  --surface: #141414;
+  --surface-hover: #1E1E1E;
+  --border: #2A2A2A;
+  --accent: #00FF88;
+  --text: #FFFFFF;
+  --text-secondary: #808080;
+  --text-muted: #4A4A4A;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.logo h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+/* ========================================
+   Category Navigation
+   ======================================== */
+
+.category-nav {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.category-btn {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.category-btn:active {
+  background: var(--surface-hover);
+  transform: scale(0.97);
+}
+
+.category-btn.active {
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ========================================
+   Main Card
+   ======================================== */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Badge */
+.card-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+/* Emoji */
+.card-emoji {
+  font-size: 48px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+/* Word Display */
+.card-word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.word-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+/* Audio Button */
+.audio-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.audio-btn:active {
+  background: var(--surface-hover);
+  transform: scale(0.95);
+}
+
+.audio-btn.playing {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Meaning */
+.card-meaning {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+/* Divider */
+.card-divider {
+  width: 40px;
+  height: 2px;
+  background: var(--border);
+  margin: 0 auto 18px;
+}
+
+/* Example Section */
+.card-example {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 255, 136, 0.03) 100%);
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  border-radius: 12px;
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.example-en {
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.example-cn {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ========================================
+   Navigation Buttons
+   ======================================== */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+  padding: 16px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-btn:active {
+  background: var(--surface-hover);
+  transform: scale(0.97);
+}
+
+/* Progress */
+.progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 70px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+#current-num {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ========================================
+   Keyboard Hint - Hidden on Mobile
+   ======================================== */
+
+.keyboard-hint {
+  display: none;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+  text-align: center;
+  padding: 12px 0 4px;
+  flex-shrink: 0;
+}
+
+.footer p {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   Tablet / Desktop
+   ======================================== */
+
+@media (min-width: 640px) {
+  .container {
+    padding: 24px;
+    max-width: 520px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .logo-icon {
+    font-size: 28px;
+  }
+
+  .logo h1 {
+    font-size: 17px;
+  }
+
+  .category-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 32px 28px;
+  }
+
+  .card-emoji {
+    font-size: 60px;
+  }
+
+  .word-text {
+    font-size: 34px;
+  }
+
+  .card-meaning {
+    font-size: 24px;
+  }
+
+  .nav-btn {
+    flex: none;
+    padding: 14px 24px;
+  }
+
+  .nav-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .keyboard-hint {
+    display: block;
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+}
+
+/* ========================================
+   Safe Area (iPhone notch)
+   ======================================== */
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .container {
+    padding-top: calc(16px + env(safe-area-inset-top));
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
+  }
+}
+
+/* ========================================
+   Selection & Scrollbar
+   ======================================== */
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
